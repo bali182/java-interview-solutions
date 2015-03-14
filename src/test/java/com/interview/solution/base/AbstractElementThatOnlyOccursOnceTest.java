@@ -13,30 +13,27 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(Parameterized.class)
-public abstract class AbstractFibonacciTestCase implements ISolverTestCase<Long, Long> {
-	private Long input;
-	private Long result;
+public abstract class AbstractElementThatOnlyOccursOnceTest implements ISolverTestCase<Object[], Object> {
+	private Object[] input;
+	private Object element;
 
-	public AbstractFibonacciTestCase(Long input, Long result) {
+	public AbstractElementThatOnlyOccursOnceTest(Object[] input, Object element) {
 		this.input = input;
-		this.result = result;
+		this.element = element;
 	}
 
 	@Parameterized.Parameters
 	public static Collection getParameters() {
 		return Arrays.asList(new Object[][]{
-						{0L, 0L},
-						{1L, 1L},
-						{3L, 2L},
-						{14L, 377L},
-						{20L, 6765L},
-						{25L, 75025L},
-						{28L, 317811L}
+						{new Object[]{"A", "A", "B", "C", "C"}, "B"},
+						{new Object[]{0, 0, 1, 1, 1, 2, 3, 2, 3}, null},
+						{new Object[]{true, false, false}, Boolean.TRUE},
+						{new Object[0], null},
 		});
 	}
 
 	@Test
-	public void testFibonacci() {
-		assertThat(getProblemSolver().solve(input), is(equalTo(result)));
+	public void checkIfOnlyOccursOnce() {
+		assertThat(getProblemSolver().solve(input), is(equalTo(element)));
 	}
 }

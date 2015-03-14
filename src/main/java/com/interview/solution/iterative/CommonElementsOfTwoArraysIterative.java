@@ -3,29 +3,32 @@ package com.interview.solution.iterative;
 import com.interview.common.IProblemSolver;
 import com.interview.common.Tuple;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Find the common elements of 2 int arrays
  */
-public class CommonElementsOfTwoArraysIterative implements IProblemSolver<Tuple<Integer[], Integer[]>, Iterable<Integer>> {
+public class CommonElementsOfTwoArraysIterative implements IProblemSolver<Tuple<Integer[], Integer[]>, Set<Integer>> {
 
-	private static void removeIfNotContains(Set<Integer> allElements, Integer[] elements) {
-		for (Integer i : elements) {
-			if (!allElements.contains(i)) {
-				allElements.remove(i);
+	private static void removeIfNotContains(Collection<Integer> commonElements, Collection<Integer> elements) {
+		// create a copy of the original commonElements, so no remove-while-iterating is done
+		for (Integer i : new HashSet<>(commonElements)) {
+			// if the elements collection doesn't contain the element, that commonElements contains, we should remove it
+			if (!elements.contains(i)) {
+				commonElements.remove(i);
 			}
 		}
 	}
 
 	@Override
-	public Iterable<Integer> solve(Tuple<Integer[], Integer[]> input) {
-		Set<Integer> allElements = new HashSet<>(Arrays.asList(input.getFirst()));
-		allElements.addAll(Arrays.asList(input.getSecond()));
-		removeIfNotContains(allElements, input.getFirst());
-		removeIfNotContains(allElements, input.getSecond());
+	public Set<Integer> solve(Tuple<Integer[], Integer[]> input) {
+		Set<Integer> a = new HashSet<>(Arrays.asList(input.getFirst()));
+		Set<Integer> b = new HashSet<>(Arrays.asList(input.getSecond()));
+
+		Set<Integer> allElements = new HashSet<>(a);
+		allElements.addAll(b);
+		removeIfNotContains(allElements, a);
+		removeIfNotContains(allElements, b);
 		return allElements;
 	}
 }

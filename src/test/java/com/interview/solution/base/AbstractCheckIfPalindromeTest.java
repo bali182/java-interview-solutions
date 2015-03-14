@@ -1,5 +1,6 @@
 package com.interview.solution.base;
 
+import com.interview.solution.common.ISolverTestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

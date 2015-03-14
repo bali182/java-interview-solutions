@@ -11,10 +11,10 @@ import java.util.stream.Collectors;
 /**
  * Find the only element in an array that only occurs once.
  */
-public class ElementThatOnlyOccursOnce implements IProblemSolver<Integer[], Integer> {
+public class ElementThatOnlyOccursOnceFunctional implements IProblemSolver<Object[], Object> {
 	@Override
-	public Integer solve(Integer[] input) {
-		Optional<Map.Entry<Integer, Integer>> onlyOnce = Arrays.asList(input)
+	public Object solve(Object[] input) {
+		Optional<Map.Entry<Object, Integer>> onlyOnce = Arrays.asList(input)
 						.stream()
 						.collect(Collectors.toMap(e -> e, e -> 1, (v1, v2) -> v1 + v2))
 						.entrySet()

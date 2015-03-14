@@ -2,6 +2,7 @@ package com.interview.solution.base;
 
 import com.interview.common.Tuple;
 import com.interview.common.Tuples;
+import com.interview.solution.common.ISolverTestCase;
 import org.junit.Test;
 
 import java.util.Arrays;
