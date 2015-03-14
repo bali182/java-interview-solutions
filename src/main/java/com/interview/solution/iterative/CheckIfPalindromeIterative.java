@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 public class CheckIfPalindromeIterative implements IProblemSolver<String, Boolean> {
 	@Override
 	public Boolean solve(String input) {
-		String clean = input.toLowerCase().replace(" ", "");
+		String clean = input.toLowerCase().replaceAll("\\W", "");
 		String reverse = new StringBuilder(clean).reverse().toString();
 		return Objects.equals(clean, reverse);
 	}

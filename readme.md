@@ -3,17 +3,17 @@ This project aims to solve the considerable amount of interview questions, that 
 To be on the safe side, here are all the questions:
 
 ### General
-* Find the most frequent integer in an array
-* Find pairs in an integer array whose sum is equal to 10 (bonus: do it in linear time)
+* Find the most frequent integer in an array [functional](https://github.com/bali182/java-interview-solutions/blob/master/src/main/java/com/interview/solution/functional/MostFrequentIntegerInArrayFunctional.java) [iterative](https://github.com/bali182/java-interview-solutions/blob/master/src/main/java/com/interview/solution/iterative/MostFrequentIntegerInArrayIterative.java)
+* Find pairs in an integer array whose sum is equal to 10 (bonus: do it in linear time) [functional] (https://github.com/bali182/java-interview-solutions/blob/master/src/main/java/com/interview/solution/functional/PairsWhoseSumIsTenFunctional.java)
 * Given 2 integer arrays, determine of the 2nd array is a rotated version of the 1st array. Ex. Original Array A={1,2,3,5,6,7,8} Rotated Array B={5,6,7,8,1,2,3}
 * Write fibbonaci iteratively and recursively (bonus: use dynamic programming)
-* Find the only element in an array that only occurs once.
-* Find the common elements of 2 int arrays
+* Find the only element in an array that only occurs once. [functional] (https://github.com/bali182/java-interview-solutions/blob/master/src/main/java/com/interview/solution/functional/ElementThatOnlyOccursOnce.java)
+* Find the common elements of 2 int arrays [iterative] (https://github.com/bali182/java-interview-solutions/blob/master/src/main/java/com/interview/solution/iterative/CommonElementsOfTwoArraysIterative.java)
 * Implement binary search of a sorted array of integers
 * Implement binary search in a rotated array (ex. {5,6,7,8,1,2,3})
 * Use dynamic programming to find the first X prime numbers
 * Write a function that prints out the binary form of an int
-* Implement parseInt
+* Implement parseInt [functional](https://github.com/bali182/java-interview-solutions/blob/master/src/main/java/com/interview/solution/functional/ParseIntFunctional.java)
 * Implement squareroot function
 * Implement an exponent function (bonus: now try in log(n) time)
 * Write a multiply function that multiples 2 integers without using *
@@ -24,7 +24,7 @@ To be on the safe side, here are all the questions:
 * Find the first non-repeated character in a String
 * Reverse a String iteratively and recursively
 * Determine if 2 Strings are anagrams
-* Check if String is a palindrome
+* Check if String is a palindrome [iterative] (https://github.com/bali182/java-interview-solutions/blob/master/src/main/java/com/interview/solution/iterative/CheckIfPalindromeIterative.java)
 * Check if a String is composed of all unique characters
 * Determine if a String is an int or a double
 * HARD: Find the shortest palindrome in a String
