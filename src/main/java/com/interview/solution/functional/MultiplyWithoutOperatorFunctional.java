@@ -13,9 +13,9 @@ import java.util.stream.Stream;
 public class MultiplyWithoutOperatorFunctional implements IProblemSolver<Tuple<Integer, Integer>, Integer> {
 	@Override
 	public Integer solve(final Tuple<Integer, Integer> input) {
-		return Collections
-						.nCopies(Math.min(input.getFirst(), input.getSecond()), Math.max(input.getFirst(), input.getSecond()))
-						.stream()
+		return IntStream
+						.generate(() -> input.getFirst().intValue())
+						.limit(input.getSecond().intValue())
 						.reduce(0, (a, b) -> a + b);
 	}
 }
