@@ -1,7 +1,5 @@
 package com.interview.common;
 
-import javax.annotation.Generated;
-
 /**
  * General tuple class for storing 2 values
  *

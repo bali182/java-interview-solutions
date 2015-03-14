@@ -3,8 +3,6 @@ package com.interview.solution.iterative;
 import com.interview.common.IProblemSolver;
 
 import java.util.Objects;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * Check if String is a palindrome

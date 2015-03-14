@@ -3,7 +3,10 @@ package com.interview.solution.iterative;
 import com.interview.common.IProblemSolver;
 import com.interview.common.Tuple;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Find the common elements of 2 int arrays
