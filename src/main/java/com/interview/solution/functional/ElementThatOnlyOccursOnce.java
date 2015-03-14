@@ -13,11 +13,6 @@ import java.util.stream.Collectors;
  */
 public class ElementThatOnlyOccursOnce implements IProblemSolver<Integer[], Integer> {
 	@Override
-	public String getName() {
-		return getClass().getSimpleName();
-	}
-
-	@Override
 	public Integer solve(Integer[] input) {
 		Optional<Map.Entry<Integer, Integer>> onlyOnce = Arrays.asList(input)
 						.stream()

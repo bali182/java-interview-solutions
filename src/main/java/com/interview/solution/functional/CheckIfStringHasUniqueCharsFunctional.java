@@ -11,11 +11,6 @@ import java.util.stream.Stream;
  */
 public class CheckIfStringHasUniqueCharsFunctional implements IProblemSolver<String, Boolean> {
 	@Override
-	public String getName() {
-		return getClass().getSimpleName();
-	}
-
-	@Override
 	public Boolean solve(String input) {
 		return !input.chars()
 						.boxed()

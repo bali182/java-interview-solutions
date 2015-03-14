@@ -7,12 +7,6 @@ package com.interview.common;
  */
 public interface IProblemSolver<I, O> {
 	/**
-	 * Returns the name of the problem
-	 * @return the name of the problem
-	 */
-	String getName();
-
-	/**
 	 * Solves the problem
 	 * @param input The input of the problem
 	 * @return The solution for the problem

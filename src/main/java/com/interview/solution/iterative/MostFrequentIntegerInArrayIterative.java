@@ -12,11 +12,6 @@ import java.util.Map;
  */
 public class MostFrequentIntegerInArrayIterative implements IProblemSolver<Integer[], Integer> {
 	@Override
-	public String getName() {
-		return getClass().getSimpleName();
-	}
-
-	@Override
 	public Integer solve(Integer[] input) {
 		// We assume that input is not null
 		Map<Integer, Integer> valueToCountMapping = new HashMap<>();

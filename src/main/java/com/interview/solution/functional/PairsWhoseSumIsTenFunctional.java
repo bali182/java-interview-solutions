@@ -14,12 +14,6 @@ import java.util.stream.Collectors;
  * This will not be linear time, so no bonus points for you
  */
 public class PairsWhoseSumIsTenFunctional implements IProblemSolver<Integer[], Set<Tuple<Integer, Integer>>> {
-
-	@Override
-	public String getName() {
-		return getClass().getSimpleName();
-	}
-
 	@Override
 	public Set<Tuple<Integer, Integer>> solve(Integer[] input) {
 		List<Integer> asList = Arrays.asList(input);

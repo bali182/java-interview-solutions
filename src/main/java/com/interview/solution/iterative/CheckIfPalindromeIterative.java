@@ -11,11 +11,6 @@ import java.util.stream.Stream;
  */
 public class CheckIfPalindromeIterative implements IProblemSolver<String, Boolean> {
 	@Override
-	public String getName() {
-		return getClass().getSimpleName();
-	}
-
-	@Override
 	public Boolean solve(String input) {
 		String clean = input.toLowerCase().replace(" ", "");
 		String reverse = new StringBuilder(clean).reverse().toString();

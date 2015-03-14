@@ -14,11 +14,6 @@ import java.util.stream.Collectors;
  */
 public class MostFrequentIntegerInArrayFunctional implements IProblemSolver<Integer[], Integer> {
 	@Override
-	public String getName() {
-		return getClass().getSimpleName();
-	}
-
-	@Override
 	public Integer solve(Integer[] input) {
 		// We assume that input is not null
 		List<Integer> asList = Arrays.asList(input);

@@ -19,10 +19,6 @@ public class CommonElementsOfTwoArraysIterative implements IProblemSolver<Tuple<
 			}
 		}
 	}
-	@Override
-	public String getName() {
-		return getClass().getSimpleName();
-	}
 
 	@Override
 	public Iterable<Integer> solve(Tuple<Integer[], Integer[]> input) {

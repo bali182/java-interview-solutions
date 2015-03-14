@@ -9,11 +9,6 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class ParseIntFunctional implements IProblemSolver<String, Integer> {
 	@Override
-	public String getName() {
-		return getClass().getSimpleName();
-	}
-
-	@Override
 	public Integer solve(String input) {
 		final AtomicInteger decimalPlace = new AtomicInteger(input.length() - 1);
 		return input
